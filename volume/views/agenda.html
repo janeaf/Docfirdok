@@ -1,0 +1,44 @@
+$def with(dic, n, m)
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <title>Lista</title>
+    </head>
+    <body style="background-color:#c49fdd79;"></body>
+    <body>
+        <center>
+            <h1>Lista usuarios</h1>
+        </center>
+        <br>
+        
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            $for n in range(len(dic)):
+              $ r = n+m
+              <tr>
+                $if (n%2 == 0):
+                  <td>$dic[r]</td>
+                  <td>$dic[n]</td>
+              </tr>
+          </tbody>
+        </table>
+        <br>
+        <div class="form-group row">
+          <form class="form-group row" method="POST">
+            <button <button style="background-color:rgba(68, 0, 255, 0.568); border-color:rgb(142, 142, 231); color:rgb(15, 15, 15)", class="bt3" type=submit>Ingresa nuevos datos</button>
+          </form>
+        </div>
+        <br>
+      </body>
+</html>

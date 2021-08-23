@@ -1,0 +1,13 @@
+#Descarga de Ubuntu 20.04
+FROM ubuntu:20.04
+#Etiquetas sobre el autor
+LABEL description = "Imagen trabajo con Firebase, Docker y Python"
+LABEL mainteiner = "Janeth Atenco Franco"
+LABEL version = "0.1"
+#Actualizacion de Ubuntu
+RUN apt update
+#Instalacion de paquetes
+RUN apt install -y python3
+RUN apt install -y python3-pip
+RUN pip3 install web.py
+RUN pip3 install pyrebase
